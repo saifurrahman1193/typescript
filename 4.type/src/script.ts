@@ -25,3 +25,69 @@ let obj = {
 }
 
 // obj.country = 'bangladesh'; // Property 'country' does not exist on type '{ name: string; profession: string; }'
+
+
+console.log('=============explicit============');
+
+let a : string
+let b : number
+let c : boolean
+
+// a = 1 // Type 'number' is not assignable to type 'string'
+
+
+let arr_number : number[] = [];
+let arr_string : string[] = [];
+
+arr_number.push(1)
+// arr_number.push('1')  // Argument of type 'string' is not assignable to parameter of type 'number'
+
+
+
+
+let arr_mixed : (number | string)[] = [];
+
+arr_mixed.push(1)
+arr_mixed.push('1')
+
+
+let a1 : string | number;
+a1 = '1'
+a1 = 1
+console.log(a1);
+
+let obj1 : {
+    name : string,
+    profession: string
+}
+
+obj1 = {
+    name : 'saifur',
+    profession: "software Developer"
+}
+
+let obj2 : object
+obj2= []  // array is also an object
+
+let var_any1;
+let var_any2 : any;
+
+var_any2 = "1"
+var_any2 = 1
+
+
+let var_any_arr : any [] = [];
+
+var_any_arr.push(1);
+var_any_arr.push('Saifur');
+console.log(var_any_arr);
+
+
+let var_any_obj : {
+    name : any,
+    profession: any
+}
+var_any_obj = {
+    name : "saifur",
+    profession: "software"
+}
