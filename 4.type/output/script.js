@@ -54,3 +54,20 @@ var_any_obj = {
     name: "saifur",
     profession: "software"
 };
+console.log('=============function============');
+let func;
+// func = 1;  // Type 'number' is not assignable to type 'Function'
+func = () => {
+    return 5;
+};
+let func2;
+func2 = (firstname, lastname) => {
+    return `My name is : ${firstname} ${lastname}`;
+};
+console.log(func2('saifur', 'rahman'));
+let func3;
+func3 = (firstname, lastname) => {
+    // return 5;  // Type 'number' is not assignable to type 'string'
+    return `My name is : ${firstname} ${lastname}`;
+};
+console.log(func3('saifur', 'rahman'));
